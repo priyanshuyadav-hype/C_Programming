@@ -1,0 +1,564 @@
+Que1. Write a programme to check whether a number is positive,negative or zero
+#include<stdio.h>
+void main()
+{
+	int num;
+	printf("Enter the integer value\n");
+	scanf("%d",&num);
+	// Condition for check the integer
+	if(num=0)
+	{
+		printf("The integer is zero");	
+	}
+	else if(num>0)
+	{
+		printf("The integer is positive");
+	}
+	else
+	{
+		printf("The integer is negative");
+	}
+}
+
+Que2.Write a programme to check whether a number is even or odd
+#include<stdio.h>
+void main()
+{
+	int num;
+	printf("Enter the number\n");
+	scanf("%d",&num);
+	if(num%2==0)
+	{
+		printf("The number is even");
+	}
+	else if(num%2!=0)
+	{
+		printf("The number is odd");
+	}
+}
+
+Que3.Write a programme to find the greater of two number using if-else
+#include<stdio.h>
+void main()
+{
+	float num1,num2;
+	printf("Enter two numbers\n");
+	scanf("%f%f",&num1,&num2);
+	//Logic for checking greater
+	if(num1==num2)
+	{
+	    printf("Both number are equal"); 
+    } 
+	else
+	{
+		if(num1>num2)
+		    printf("%.2f is greater than %.2f",num1,num2);
+		else
+		    printf("%.2f is greater than %.2f",num2,num1);
+	}
+}
+
+
+Que4.Write a programme to check whether a person is eligible to vote(age>=18)
+#include<stdio.h>
+void main()
+{
+   int age;
+   printf("Enter your age\n");
+   scanf("%d",&age);
+   //Condition for elligible to vote
+   if(age>=18)
+       printf("You are elligible to vote!!");
+	else
+	   printf("Sorry, you are not elligible");	
+}
+
+Que5.Write a programme to check whether a year is leap year or not
+#include<stdio.h>
+void main()
+{
+	int year;
+	printf("Enter the year\n");
+	scanf("%d",&year);
+	// Check a year is leap or not
+	if(year%400==0 || (year%4==0 && year%100!=0))
+	   printf("%d year is leap year",year);
+	else
+	   printf("%d year is not leap year",year);
+}
+
+Que6.Write a programme to find the largest among three numbers
+#include<stdio.h>
+void main()
+{
+	int a,b,c;
+	printf("Enter three numbers a,b and c\n");
+	scanf("%d%d%d",&a,&b,&c);
+	//Largest among three numbers
+	if(a==b && b==c)
+	{
+		printf("All numbers are same");
+	}
+	else if(a>b && a>c)
+	{
+		printf("A is greater");
+	}
+	else if(b>a && b>c)
+	{
+		printf("B is greater");
+	}
+	else if(c>a && c>b)
+	{
+		printf("C is greater");
+	}
+}
+
+Que7.Write a programme to check whether a character is vowel or consonant
+#include<stdio.h>
+void main()
+{
+	char ch;
+	printf("Enter a character\n");
+	scanf("%c",&ch);
+	//Check vowel or consonant
+    if(ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u')
+	{
+		printf("%c Character is vowel",ch);
+	}
+	else if(ch=='A'||ch=='E'||ch=='I'||ch=='O'||ch=='U')
+	{
+		printf("%c Character is vowel",ch);
+	}
+	else if(ch>='A' && ch<='Z'||ch>='a' && ch<='z')
+	{
+		printf("%c Character is consonant",ch);
+	}
+	else
+	{
+		printf("%c Character is not Alphabet",ch);
+	}
+}
+
+Que8.Write a programme to check whether a character is uppercase or lowercase
+#include<stdio.h>
+void main()
+{
+	char ch;
+	printf("Enter a character\n");
+	scanf("%c",&ch);
+	//Check upper case or lower case
+	if(ch>='a' && ch<='z')
+	    printf("%c character is in lower case",ch);
+	else if(ch>='A' && ch<='Z')
+	    printf("%c character is in upper case",ch);
+	else
+	    printf("%c character is not valid",ch);
+}
+
+Que9.Write a programme to check whether a number is divisible by both 5 and 11.
+#include<stdio.h>
+void main()
+{
+	int num;
+	printf("Enter a number\n");
+	scanf("%d",&num);
+	//Number is divisible or not
+	if(num%5==0 && num%11==0)
+	    printf("%d number is divisible by both 5 and 11",num);
+	else
+	    printf("%d number is not divisible by both 5 and 11",num);
+}
+
+Que10.Write a programme to check whether a number is multiple of 3 or 7
+#include<stdio.h>
+void main()
+{
+	int num;
+	printf("Enter a number\n");
+	scanf("%d",&num);
+	//Multiple of 3 or 7
+	if(num%3==0 || num%7==0)
+	    printf("%d number is multiple of 3 or 7",num);
+	else
+	    printf("%d number is not multiple of 3 or 7",num);
+}
+
+Que11.Write a programme to find the smallest among of three numbers
+#include<stdio.h>
+void main()
+{
+	int num1,num2,num3;
+	printf("Enter three numbers\n");
+	scanf("%d%d%d",&num1,&num2,&num3);
+	//Smallest among of three numbers
+	if(num1==num2 && num2==num3)
+	    printf("All numbers are equal");
+	else if(num1<num2 && num1<num3)
+	    printf("%d number is smaller",num1);
+	else if(num2<num1 && num2<num3)
+	    printf("%d number is smaller",num2);
+	else if(num3<num1 && num3<num2)
+	    printf("%d number is smaller",num3);
+	else
+	    printf("Numbers are not valid");
+}
+
+Que12.Write a programme to check whether a given character is an alphabet, digit or special character.
+#include<stdio.h>
+void main()
+{
+	char ch;
+	printf("Enter a character\n");
+	scanf("%c",&ch);
+	//Check a given character
+	if(ch>='a' && ch<='z' || ch>='A' && ch<='Z')
+	   printf("%c character is Alphabet",ch);
+	else if(ch>='0' && ch<='9')
+	   printf("%c character is Number",ch);
+	else
+	   printf("%c character is Special symbol",ch);
+}
+
+Que13.Write a programme to calculate the grade of a student based on marks
+#include<stdio.h>
+void main()
+{
+	int eng,hin,sci,mat,soc,total,per;
+	printf("Enter English marks\n");
+	scanf("%d",&eng);
+	printf("Enter Hindi marks\n");
+	scanf("%d",&hin);
+	printf("Enter Mathematics marks\n");
+	scanf("%d",&mat);
+	printf("Enter Science marks\n");
+	scanf("%d",&sci);
+	printf("Enter Social Science marks\n");
+	scanf("%d",&soc);
+	total=eng+hin+mat+sci+soc;
+	printf("Total marks = %d\n",total);
+	per=total/5;
+	printf("Percentage = %d\n",per);
+	//Grade of a student
+	if(per<=100 && per>=90)
+	    printf("Grade = A+");
+	else if(per<90 && per>=80)
+	    printf("Grade = A");
+	else if(per<80 && per>=70)
+	    printf("Grade = B+");
+	else if(per<70 && per>=60)
+	    printf("Grade = B");
+	else if(per<60 && per>=50)
+	    printf("Grade = C+");
+	else if(per<50 && per>=45)
+	    printf("Grade = C");
+	else if(per<45 && per>=0)
+	    printf("Grade = D");
+}
+
+
+Que14.Write a program to check whether a number lies between 100 and 200
+#include<stdio.h>
+void main()
+{
+   int num;
+   printf("Enter a number\n");
+   scanf("%d",&num);
+   //Check number lie betweeb 100 and 200
+   if(num>100 && num<200)
+       printf("%d Number lies between 100 and 200",num);
+    else
+       printf("%d Number does not lie between 100 and 200",num);
+}
+
+
+Que16.Write a program to determine whether a triangle is valid based on three angles.
+#include<stdio.h>
+void main()
+{
+	int a1,a2,a3,sum;
+	printf("Enter the angle of triangle\n");
+	scanf("%d%d%d",&a1,&a2,&a3);
+	sum=a1+a2+a3;
+	//Triangle is valid
+	if(sum==180)
+	    printf("The triangle is valid based on three angles");
+	else
+	    printf("The triangle is not valid based on three angles"); 
+}	
+
+Que17.Write a programme to check whether a triangle is equilateral,isosceles or scalene.
+#include<stdio.h>
+void main()
+{
+	int a,b,c;
+	printf("Enter the sides of triangle\n");
+	scanf("%d%d%d",&a,&b,&c);
+	//Check triangle - equilateral,isossceles or scalene
+	if(a==b && b==c && c==a)
+	    printf("Triangle is equilateral");
+	elif(a==b || b==c || c==a)
+	    printf("Triangle is isosceles");
+	else
+	    printf("Triangle is scalen");
+}
+
+Que18.Write a programme to calculate electricity bill according to units 
+#include<stdio.h>
+void main()
+{
+	int units,pay;
+	printf("Enter the value of units of electricity bill.\n");
+	scanf("%d",&units);
+	//Logic
+	if(units>=0 && units<=100)
+	{
+		pay=units*3;
+		printf("The total payment of your electricity bill = %d",pay);
+	}
+	else if(units>100 && units<=200)
+	{
+		pay=units*5;
+		printf("The total payment of your electricity bill = %d",pay);
+	}
+	else if(units>200 && units<=300)
+	{
+		pay=units*7;
+		printf("The total payment of your electricity bill = %d",pay);
+	}
+	else if(units>300)
+	{
+		pay=units*8;
+		printf("The total payment of your electricity bill = %d",pay);
+	}
+	else
+	{
+		printf("Units of electricity bill is not valid!!");
+	}
+}
+
+Que19.Write a programme to calculate employee bonus based on salary slabs.
+#include<stdio.h>
+void main()
+{
+	int sal,bonus;
+	printf("Enter your salary.\n");
+	scanf("%d",&sal);
+	//Logic
+	if(sal<=20000)
+	{
+		bonus=(20*sal)/100;
+		printf("Your bonus is = %d",bonus);
+	}
+	else if(sal>20000 && sal<=50000)
+	{
+		bonus=(15*sal)/100;
+		printf("Your bonus is = %d",bonus);
+	}
+	else if(sal>50000 && sal<=100000)
+	{
+		bonus=(10*sal)/100;
+		printf("Your bonus is = %d",bonus);
+	}
+	else if(sal>100000)
+	{
+		bonus=(5*sal)/100;
+		printf("Your bonus is = %d",bonus);
+	}
+	else
+	{
+		printf("The value of your salary is invalid!!");
+	}
+}
+
+Que20.Write a programme to find the second largest among three numbers.
+#include<stdio.h>
+void main()
+{
+	int a,b,c;
+	printf("Enter three numbers.\n");
+	scanf("%d%d%d",&a,&b,&c);
+	//Logic
+	if((a>=b && a<=c) || (a>=c && a<=b))
+	  printf("%d num is second largest.",a);
+	else if((b>=a && b<=c) || (b>=c && b<=a))
+	  printf("%d num is second largest.",a);
+	else if((c>=a && c<=b) || (c>=b && c<=a))
+	  printf("%d num is second largest.",c);
+	else
+	  printf("Numbers are not valid");
+}
+
+Que21.Write a programme to check whether a number is three digit number or not.
+#include<stdio.h>
+void main()
+{
+	int num;
+	printf("Enter a three digit number.\n");
+	scanf("%d",&num);
+	if(num>=100 && num<=999)
+	{
+		printf("The number is three digit number.");
+	}
+	else
+	{
+		printf("The number is not three digit number.");
+	}
+}
+
+Que22.Write a programme to check whether a character is a lowercase vowel.
+#include<stdio.h>
+void main()
+{
+	char ch;
+	printf("Enter any character.\n");
+	scanf("%c",&ch);
+	//Logic
+	if(ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u')
+	{
+		printf("The character is lower case vowel.");
+	}
+	else
+	{
+		printf("The chracter is not lower case value");
+	}
+}
+
+Que23.Write a programme to determine if a person is elligible for a loan.
+#include<stdio.h>
+void main()
+{
+	int age,mi,cs,bs;
+	printf("Enter your age.\n");
+	scanf("%d",&age);
+	printf("Enter your monthly income.\n");
+	scanf("%d",&mi);
+	printf("Enter your credit score.\n");
+	scanf("%d",&cs);
+	printf("Enter your business stability in years.\n");
+	scanf("%d",&bs);
+	//Logic
+	if(age>=21 && age<=70)
+	{
+		if(mi>=25000)
+		{
+		   if(cs>=700)
+		   {
+		   	  if(bs>2)
+		   	  {
+		   	  	printf("Congratulation,You are elligible for getting the loan!!");
+			  }
+			  else
+			  {
+			  	printf("Sorry you are not elligible because of business stability");
+			  }
+		   }
+		   else
+		   {
+		   	printf("Sorry you are not elligible because of credit score");
+		   }	
+		}
+		else
+		{
+		printf("Sorry you are not elligible because of monthly income.");	
+		}
+	}
+	else
+	{
+		printf("Sorry you are not elligible because of age criteriaon.");
+	}
+}
+
+Que24.Write a programme to find the greatest among three numbers using nested if-else.
+#include<stdio.h>
+void main()
+{
+	int num1,num2,num3;
+	printf("Enter three numbers.\n");
+	scanf("%d%d%d",&num1,&num2,&num3);
+	//Logic
+	if(num1==num2 && num2==num3)
+	{
+		printf("All numbers are equal.");
+	}
+	else
+	{
+	if(num1>num2)
+	{
+		if(num1>num3)
+		{
+			printf("%d num is greater",num1);
+		}
+		else
+		{
+			printf("%d num is greater.",num3);
+		}
+	}
+	else
+	{
+		if(num2>num3)
+		{
+			printf("%d num is greater.",num2);
+		}
+		else
+		{
+			printf("%d num is greater.",num3);
+		}
+	}
+    }  
+}
+
+Que25.Write a programme to implement a simple calculator using if else if.
+#include<stdio.h>
+void main()
+{
+	int a,b,cal;
+	char op;
+	printf("Enter operator\n");
+	scanf("%c",&op);
+	printf("Enter two numbers\n");
+	scanf("%d%d",&a,&b);
+	//Logic for calculator
+	if(op=='+')
+	{
+		cal=a+b;
+		printf("Sum = %d",cal);
+	}
+	else if(op=='-')
+	{
+		if(a>b)
+		{
+			cal=a-b;
+		    printf("Difference = %d",cal);
+		}
+		else
+		{
+			cal=b-a;
+		    printf("Difference = %d",cal);
+		}
+	}
+	else if(op=='*')
+	{
+		cal=a*b;
+		printf("Multiply = %d",cal);
+	}
+	else if(op=='/')
+	{
+		if(a>b)
+		{
+			cal=a/b;
+		    printf("Divide = %d",cal);
+		}
+		else
+		{
+			cal=b/a;
+		    printf("Divide = %d",cal);
+		}
+	}
+	else
+	{
+		printf("Operator is invalid!!");
+	}
+}
+
+
+
