@@ -1,0 +1,2197 @@
+/*//to convert km to mm
+#include <stdio.h>
+int main() 
+{
+    float km, mm;
+    // Input distance in kilometers
+    printf("Enter distance in kilometers: ");
+    scanf("%f", &km);
+    // Convert kilometers to millimeters
+    mm = km * 1000000; // 1 km = 1,000,000 mm
+    // Output result
+    printf("Distance in millimeters: %.0f mm\n", mm);
+    return 0;
+}*/
+/*//to calculate a circumference of a circle
+#include <stdio.h>
+#define PI 3.14
+void main() 
+{
+    float radius, circumference;
+    printf("Enter radius of the circle: ");
+    scanf("%f", &radius);
+    circumference = 2 * PI * radius;
+    printf("Circumference of the circle = %.2f\n", circumference);
+}*/
+/*//to calculate the area of rectangle
+#include <stdio.h>
+void main() {
+    float length, width, area;
+    printf("Enter length of rectangle: ");
+    scanf("%f", &length);
+    printf("Enter width of rectangle: ");
+    scanf("%f", &width);
+    area = length * width;
+    printf("Area of rectangle = %.2f\n", area);
+}*/
+/*//to calculate the volume of cuboid
+#include <stdio.h>
+void main() 
+{
+    float length, width, height, volume;
+    printf("Enter length of cuboid: ");
+    scanf("%f", &length);
+    printf("Enter width of cuboid: ");
+    scanf("%f", &width);
+    printf("Enter height of cuboid: ");
+    scanf("%f", &height);
+    volume = length * width * height;
+    printf("Volume of cuboid = %.2f\n", volume);
+}*/
+/*//to calculate the parameter of rectangle
+#include <stdio.h>
+void main() 
+{
+    float length, width, perimeter;
+    printf("Enter length of rectangle: ");
+    scanf("%f", &length);
+    printf("Enter width of rectangle: ");
+    scanf("%f", &width);
+    perimeter = 2 * (length + width);
+    printf("Perimeter of rectangle = %.2f\n", perimeter);
+}*/
+/*//to calculate volume of sphere
+#include <stdio.h>
+#define PI 3.14
+void main() {
+    float radius, volume;
+    printf("Enter radius of the sphere: ");
+    scanf("%f", &radius);
+    volume = (4.0 / 3.0) * PI * radius * radius * radius;
+    printf("Volume of sphere = %.2f\n", volume);
+}*/
+/*//to convert the tempereture from fereheneit to calcius
+#include <stdio.h>
+void main() 
+{
+    float fahrenheit, celsius;
+    printf("Enter temperature in Fahrenheit: ");
+    scanf("%f", &fahrenheit);
+    celsius = (fahrenheit - 32) * 5 / 9;
+    printf("Temperature in Celsius = %.2f\n", celsius);
+}*/
+/*//to convert calcius to ferehneit
+#include <stdio.h>
+void main() 
+{
+    float celsius, fahrenheit;
+    printf("Enter temperature in Celsius: ");
+    scanf("%f", &celsius);
+    fahrenheit = (celsius * 9 / 5) + 32;
+    printf("Temperature in Fahrenheit = %.2f\n", fahrenheit);
+}*/
+/*//to calculate the parameter of traingle
+#include <stdio.h>
+void main() 
+{
+    float side1, side2, side3, perimeter;
+    printf("Enter first side of triangle: ");
+    scanf("%f", &side1);
+    printf("Enter second side of triangle: ");
+    scanf("%f", &side2);
+    printf("Enter third side of triangle: ");
+    scanf("%f", &side3);
+    perimeter = side1 + side2 + side3;
+    printf("Perimeter of triangle = %.2f\n", perimeter);
+}*/
+/*//to calculate the parameter of square
+#include <stdio.h>
+void main() 
+{
+    float side, perimeter;
+    printf("Enter side of square: ");
+    scanf("%f", &side);
+    perimeter = 4 * side;
+    printf("Perimeter of square = %.2f\n", perimeter);
+}*/
+/*//to swap two number without using third variable and arithmatic operator
+#include <stdio.h>
+void main() 
+{
+    int a, b;
+    printf("Enter first number: ");
+    scanf("%d", &a);
+    printf("Enter second number: ");
+    scanf("%d", &b);
+    a = a ^ b;
+    b = a ^ b;
+    a = a ^ b;
+    printf("After swapping:\n");
+    printf("First number = %d\n", a);
+    printf("Second number = %d\n", b);
+}*/
+/*//greater between four number
+#include <stdio.h>
+void main()
+{
+    int a, b, c, d;
+    printf("Enter four numbers: ");
+    scanf("%d%d%d%d", &a, &b, &c, &d);
+    if (a > b)
+    {
+        if (a > c)
+        {
+            if (a > d)
+                printf("Greatest = %d", a);
+            else
+                printf("Greatest = %d", d);
+        }
+        else
+        {
+            if (c > d)
+                printf("Greatest = %d", c);
+            else
+                printf("Greatest = %d", d);
+        }
+    }
+    else
+    {
+        if (b > c)
+        {
+            if (b > d)
+                printf("Greatest = %d", b);
+            else
+                printf("Greatest = %d", d);
+        }
+        else
+        {
+            if (c > d)
+                printf("Greatest = %d", c);
+            else
+                printf("Greatest = %d", d);
+        }
+    }
+}*/
+/*//to check year is leap year or not
+#include <stdio.h>
+void main()
+{
+    int year;
+    printf("Enter year: ");
+    scanf("%d", &year);
+    if (year % 4 == 0)
+    {
+        if (year % 100 == 0)
+        {
+            if (year % 400 == 0)
+                printf("Leap Year");
+            else
+                printf("Not a Leap Year");
+        }
+        else
+            printf("Leap Year");
+    }
+    else
+        printf("Not a Leap Year");
+}*/
+/*//to check a given number is positive,negative or zero
+#include <stdio.h>
+void main()
+{
+    int n;
+    printf("Enter a number: ");
+    scanf("%d", &n);
+    if (n > 0)
+        printf("Positive");
+    else if (n < 0)
+        printf("Negative");
+    else
+        printf("Zero");
+}*/
+/*//to check given three digit number is palandrome or not
+#include <stdio.h>
+void main()
+{
+    int n, temp, rev = 0, rem;
+    printf("Enter a 3-digit number: ");
+    scanf("%d", &n);
+    temp = n;
+    while (n != 0)
+    {
+        rem = n % 10;
+        rev = rev * 10 + rem;
+        n = n / 10;
+    }
+    if (temp == rev)
+        printf("Palindrome Number");
+    else
+        printf("Not a Palindrome Number");
+}*/
+/*//to check a given 3 digit number is armstrong or not
+#include <stdio.h>
+void main()
+{
+    int n, temp, rem, sum = 0;
+    printf("Enter a 3-digit number: ");
+    scanf("%d", &n);
+    temp = n;
+    while (n != 0)
+    {
+        rem = n % 10;
+        sum = sum + (rem * rem * rem);
+        n = n / 10;
+    }
+    if (temp == sum)
+        printf("Armstrong Number");
+    else
+        printf("Not an Armstrong Number");
+}*/
+/*//to check a given number is positive, negative or zero
+#include <stdio.h>
+void main()
+{
+    int n;
+    printf("Enter a number: ");
+    scanf("%d",&n);
+    if(n > 0)
+        printf("Positive");
+    else if(n < 0)
+        printf("Negative");
+    else
+        printf("Zero");
+}*/
+/*//to check a given number is even or odd
+#include <stdio.h>
+void main()
+{
+    int n;
+    printf("Enter a number: ");
+    scanf("%d",&n);
+    if(n%2==0)
+        printf("Even");
+    else
+        printf("Odd");
+}*/
+/*//to check greater between between two number
+#include <stdio.h>
+void main()
+{
+    int a,b;
+    printf("Enter two numbers: ");
+    scanf("%d%d",&a,&b);
+    if(a>b)
+        printf("%d is greater",a);
+    else
+        printf("%d is greater",b);
+}*/
+/*//to check aligibility for vote
+#include <stdio.h>
+void main()
+{
+    int age;
+    printf("Enter age: ");
+    scanf("%d",&age);
+    if(age>=18)
+        printf("Eligible to vote");
+    else
+        printf("Not eligible");
+}*/
+/*//to check year is leap year or not
+#include <stdio.h>
+void main()
+{
+    int year;
+    printf("Enter year: ");
+    scanf("%d",&year);
+    if((year%400==0)||(year%4==0 && year%100!=0))
+        printf("Leap Year");
+    else
+        printf("Not a Leap Year");
+}*/
+/*//to check largest value between three digit number
+#include <stdio.h>
+void main()
+{
+    int a,b,c;
+    printf("Enter three numbers: ");
+    scanf("%d%d%d",&a,&b,&c);
+
+    if(a>b && a>c)
+        printf("%d is largest",a);
+    else if(b>c)
+        printf("%d is largest",b);
+    else
+        printf("%d is largest",c);
+}*/
+/*//to check variable is vowel or consonent
+#include <stdio.h>
+void main()
+{
+    char ch;
+    printf("Enter a character: ");
+    scanf(" %c",&ch);
+
+    if(ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u'||
+       ch=='A'||ch=='E'||ch=='I'||ch=='O'||ch=='U')
+        printf("Vowel");
+    else
+        printf("Consonant");
+}*/
+/*//to check variable is lowercase or uppercase
+#include <stdio.h>
+void main()
+{
+    char ch;
+    printf("Enter a character: ");
+    scanf(" %c",&ch);
+    if(ch>='A' && ch<='Z')
+        printf("Uppercase");
+    else if(ch>='a' && ch<='z')
+        printf("Lowercase");
+    else
+        printf("Not an alphabet");
+}*/
+/*//to check number is divisible by both 5 and 11
+#include <stdio.h>
+void main()
+{
+    int n;
+    printf("Enter a number: ");
+    scanf("%d",&n);
+    if(n%5==0 && n%11==0)
+        printf("Divisible by 5 and 11");
+    else
+        printf("Not divisible");
+}*/
+/*//to check a given number is multiply by both 3 and 7
+#include <stdio.h>
+void main()
+{
+    int n;
+    printf("Enter a number: ");
+    scanf("%d",&n);
+    if(n%3==0 || n%7==0)
+        printf("Multiple of 3 or 7");
+    else
+        printf("Not a multiple of 3 or 7");
+}*/
+/*//to check the smallest value between three number
+#include <stdio.h>
+void main()
+{
+    int a, b, c;
+    printf("Enter three numbers: ");
+    scanf("%d%d%d", &a, &b, &c);
+
+    if(a<=b && a<=c)
+        printf("Smallest = %d", a);
+    else if(b<=a && b<=c)
+        printf("Smallest = %d", b);
+    else
+        printf("Smallest = %d", c);
+}*/
+/*//to check given character is alphabet or special character
+#include <stdio.h>
+void main()
+{
+    char ch;
+    printf("Enter a character: ");
+    scanf(" %c", &ch);
+    if((ch>='A' && ch<='Z') || (ch>='a' && ch<='z'))
+        printf("Alphabet");
+    else if(ch>='0' && ch<='9')
+        printf("Digit");
+    else
+        printf("Special Character");
+}*/
+/*//to calculate grade of student according to their marks
+#include <stdio.h>
+void main()
+{
+    int marks;
+    printf("Enter marks: ");
+    scanf("%d", &marks);
+    if(marks>=90)
+        printf("Grade A");
+    else if(marks>=75)
+        printf("Grade B");
+    else if(marks>=60)
+        printf("Grade C");
+    else if(marks>=40)
+        printf("Grade D");
+    else
+        printf("Fail");
+}*/
+/*//to check number lie between 100 and 200
+#include <stdio.h>
+void main()
+{
+    int n;
+    printf("Enter number: ");
+    scanf("%d", &n);
+    if(n>=100 && n<=200)
+        printf("Number is between 100 and 200");
+    else
+        printf("Number is not between 100 and 200");
+}*/
+/*//to check max number four number 
+#include <stdio.h>
+void main()
+{
+    int a,b,c,d,max;
+    printf("Enter four numbers: ");
+    scanf("%d%d%d%d",&a,&b,&c,&d);
+    max=a;
+    if(b>max) max=b;
+    if(c>max) max=c;
+    if(d>max) max=d;
+    printf("Maximum = %d",max);
+}*/
+/*//to check traingle is valid or not
+#include <stdio.h>
+void main()
+{
+    int a,b,c;
+    printf("Enter three angles: ");
+    scanf("%d%d%d",&a,&b,&c);
+
+    if(a+b+c==180)
+        printf("Valid Triangle");
+    else
+        printf("Invalid Triangle");
+}*/
+/*// to check traingle is equilateral, isosceles or scalene
+#include <stdio.h>
+void main()
+{
+    int a,b,c;
+    printf("Enter three sides: ");
+    scanf("%d%d%d",&a,&b,&c);
+    if(a==b && b==c)
+        printf("Equilateral");
+    else if(a==b || b==c || a==c)
+        printf("Isosceles");
+    else
+        printf("Scalene");
+}*/
+/*//to calculate bill according to units consumed
+#include <stdio.h>
+void main()
+{
+    int unit;
+    float bill;
+    printf("Enter units: ");
+    scanf("%d",&unit);
+    if(unit<=100)
+        bill=unit*1.5;
+    else if(unit<=200)
+        bill=100*1.5+(unit-100)*2;
+    else
+        bill=100*1.5+100*2+(unit-200)*3;
+
+    printf("Bill = %.2f",bill);
+}*/
+/*//to check salary slabs and bonus of employee
+#include <stdio.h>
+void main()
+{
+    float salary,bonus;
+    printf("Enter salary: ");
+    scanf("%f",&salary);
+
+    if(salary<20000)
+        bonus=salary*0.10;
+    else if(salary<50000)
+        bonus=salary*0.15;
+    else
+        bonus=salary*0.20;
+
+    printf("Bonus = %.2f",bonus);
+}*/
+/*//to check second largest number between three number
+#include <stdio.h>
+void main()
+{
+    int a,b,c;
+    printf("Enter three numbers: ");
+    scanf("%d%d%d",&a,&b,&c);
+    if((a>b && a<c)||(a>c && a<b))
+        printf("Second Largest = %d",a);
+    else if((b>a && b<c)||(b>c && b<a))
+        printf("Second Largest = %d",b);
+    else
+        printf("Second Largest = %d",c);
+}*/
+/*//to check number is 3 digit number or not
+#include <stdio.h>
+void main()
+{
+    int n;
+    printf("Enter number: ");
+    scanf("%d",&n);
+    if(n>=100 && n<=999)
+        printf("3-digit number");
+    else
+        printf("Not a 3-digit number");
+}*/
+/*//to check character is lowercase or uppercase
+#include <stdio.h>
+void main()
+{
+    char ch;
+    printf("Enter character: ");
+    scanf(" %c",&ch);
+    if(ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u')
+        printf("Lowercase Vowel");
+    else
+        printf("Not a Lowercase Vowel");
+}*/
+/*//to check person is eligible for loan or not
+#include <stdio.h>
+void main()
+{
+    int age;
+    float loan;
+    printf("Enter age and loan: ");
+    scanf("%d%f",&age,&loan);
+
+    if(age>=21 && salary>=25000)
+        printf("Eligible for Loan");
+    else
+        printf("Not Eligible");
+}*/
+/*//to check greater number between three number
+#include <stdio.h>
+void main()
+{
+    int a,b,c;
+    printf("Enter three numbers: ");
+    scanf("%d%d%d",&a,&b,&c);
+
+    if(a>b)
+    {
+        if(a>c)
+            printf("Greatest = %d",a);
+        else
+            printf("Greatest = %d",c);
+    }
+    else
+    {
+        if(b>c)
+            printf("Greatest = %d",b);
+        else
+            printf("Greatest = %d",c);
+    }
+}*/
+/*//to implement a simple calculator
+#include <stdio.h>
+void main()
+{
+    float a,b;
+    char op;
+
+    printf("Enter expression (e.g. 5 + 2): ");
+    scanf("%f %c %f",&a,&op,&b);
+
+    if(op=='+')
+        printf("Result = %.2f",a+b);
+    else if(op=='-')
+        printf("Result = %.2f",a-b);
+    else if(op=='*')
+        printf("Result = %.2f",a*b);
+    else if(op=='/')
+    {
+        if(b!=0)
+            printf("Result = %.2f",a/b);
+        else
+            printf("Division by zero not possible");
+    }
+    else
+        printf("Invalid Operator");
+}*/
+/*//to calculate the area of given shape square, circle, rectangle, traingle.
+#include <stdio.h>
+void main()
+{
+    int choice;
+    float side, radius, length, width, base, height, area;
+    printf("1. Square\n");
+    printf("2. Circle\n");
+    printf("3. Rectangle\n");
+    printf("4. Triangle\n");
+    printf("Enter your choice: ");
+    scanf("%d", &choice);
+    switch(choice)
+    {
+        case 1:
+            printf("Enter side: ");
+            scanf("%f", &side);
+            area = side * side;
+            printf("Area of Square = %.2f", area);
+            break;
+
+        case 2:
+            printf("Enter radius: ");
+            scanf("%f", &radius);
+            area = 3.14 * radius * radius;
+            printf("Area of Circle = %.2f", area);
+            break;
+
+        case 3:
+            printf("Enter length and width: ");
+            scanf("%f%f", &length, &width);
+            area = length * width;
+            printf("Area of Rectangle = %.2f", area);
+            break;
+
+        case 4:
+            printf("Enter base and height: ");
+            scanf("%f%f", &base, &height);
+            area = 0.5 * base * height;
+            printf("Area of Triangle = %.2f", area);
+            break;
+
+        default:
+            printf("Invalid Choice");
+    }
+}*/
+/*//to check greater number between two number
+#include <stdio.h>
+void main()
+{
+    int a, b, choice;
+    printf("Enter two numbers: ");
+    scanf("%d%d", &a, &b);
+    choice = (a > b);
+    switch(choice)
+    {
+        case 1:
+            printf("%d is greater", a);
+            break;
+
+        case 0:
+            if(a == b)
+                printf("Both numbers are equal");
+            else
+                printf("%d is greater", b);
+            break;
+    }
+}*/
+/*//to check given odd number
+#include <stdio.h>
+void main()
+{
+    int i, n;
+    printf("Enter how many odd numbers: ");
+    scanf("%d", &n);
+
+    for(i = 1; i <= n * 2; i = i + 2)
+    {
+        printf("%d ", i);
+    }
+}*/
+/*//sum of series of orderof square of natural number
+#include <stdio.h>
+void main()
+{
+    int i, n;
+    printf("Enter limit: ");
+    scanf("%d", &n);
+
+    for(i = 1; i <= n; i++)
+    {
+        printf("%d ", i * i);
+    }
+}*/
+/*//to print series of even number
+#include <stdio.h>
+void main()
+{
+    int i, n;
+    printf("Enter limit: ");
+    scanf("%d", &n);
+
+    for(i = 2; i <= n * 2; i = i + 2)
+    {
+        printf("%d ", i * i);
+    }
+}*/
+/*//to print series of odd  number
+#include <stdio.h>
+void main()
+{
+    int i, n;
+    printf("Enter limit: ");
+    scanf("%d", &n);
+    for(i = 1; i <= n; i++)
+    {
+        printf("%d ", 2 * i - 1);
+    }
+}*/
+/*//to print series of 9,99,999,....
+#include <stdio.h>
+void main()
+{
+    int i, n;
+    long num = 0;
+    printf("Enter number of terms: ");
+    scanf("%d", &n);
+
+    for(i = 1; i <= n; i++)
+    {
+        num = num * 10 + 9;
+        printf("%ld ", num);
+    }
+}*/
+/*// to print series of 1,11,111,...
+#include <stdio.h>
+void main()
+{
+    int i, n;
+    long num = 0;
+    printf("Enter number of terms: ");
+    scanf("%d", &n);
+
+    for(i = 1; i <= n; i++)
+    {
+        num = num * 10 + 1;
+        printf("%ld ", num);
+    }
+}*/
+/*//to find factor of given of number
+#include <stdio.h>
+void main()
+{
+    int n, i;
+    printf("Enter a number: ");
+    scanf("%d", &n);
+    printf("Factors of %d are:\n", n);
+    for(i = 1; i <= n; i++)
+    {
+        if(n % i == 0)
+        {
+            printf("%d ", i);
+        }
+    }
+}*/
+/*//to check given number is perfect or not
+#include <stdio.h>
+void main()
+{
+    int n, i, sum = 0;
+    printf("Enter a number: ");
+    scanf("%d", &n);
+
+    for(i = 1; i < n; i++)
+    {
+        if(n % i == 0)
+        {
+            sum = sum + i;
+        }
+    }
+    if(sum == n)
+        printf("%d is a Perfect Number", n);
+    else
+        printf("%d is Not a Perfect Number", n);
+}*/
+/*//to find the hcf of a given two number
+#include <stdio.h>
+void main()
+{
+    int a, b, i, hcf;
+    printf("Enter two numbers: ");
+    scanf("%d%d", &a, &b);
+    hcf = 1;
+    for(i = 1; i <= a && i <= b; i++)
+    {
+        if(a % i == 0 && b % i == 0)
+        {
+            hcf = i;
+        }
+    }
+
+    printf("HCF = %d", hcf);
+}*/
+/*//to check a given number is prime or  not
+#include <stdio.h>
+void main()
+{
+    int n, i, count = 0;
+    printf("Enter a number: ");
+    scanf("%d", &n);
+
+    for(i = 1; i <= n; i++)
+    {
+        if(n % i == 0)
+        {
+            count++;
+        }
+    }
+
+    if(count == 2)
+        printf("%d is a Prime Number", n);
+    else
+        printf("%d is Not a Prime Number", n);
+}*/
+/*//to find lcm of a given number
+#include <stdio.h>
+void main()
+{
+    int a, b, max;
+    printf("Enter two numbers: ");
+    scanf("%d%d", &a, &b);
+    max = (a > b) ? a : b;
+
+    while(1)
+    {
+        if(max % a == 0 && max % b == 0)
+        {
+            printf("LCM = %d", max);
+            break;
+        }
+        max++;
+    }
+}*/
+/*//to check a given number is strong or not
+#include <stdio.h>
+void main()
+{
+    int n, temp, rem, i, fact, sum = 0;
+    printf("Enter a number: ");
+    scanf("%d", &n);
+    temp = n;
+
+    while(temp > 0)
+    {
+        rem = temp % 10;
+        fact = 1;
+
+        for(i = 1; i <= rem; i++)
+        {
+            fact = fact * i;
+        }
+
+        sum = sum + fact;
+        temp = temp / 10;
+    }
+
+    if(sum == n)
+        printf("%d is a Strong Number", n);
+    else
+        printf("%d is Not a Strong Number", n);
+}*/
+/*//to print the series of armstrong number
+#include <stdio.h>
+void main()
+{
+    int n, i, temp, rem, sum;
+    printf("Enter limit: ");
+    scanf("%d", &n);
+    printf("Armstrong Numbers are:\n");
+
+    for(i = 1; i <= n; i++)
+    {
+        temp = i;
+        sum = 0;
+
+        while(temp > 0)
+        {
+            rem = temp % 10;
+            sum = sum + rem * rem * rem;
+            temp = temp / 10;
+        }
+
+        if(sum == i)
+            printf("%d ", i);
+    }
+}*/
+/*//to print the table to 2 to n
+#include <stdio.h>
+void main()
+{
+    int n, i, j;
+    printf("Enter last table number: ");
+    scanf("%d", &n);
+
+    for(i = 2; i <= n; i++)
+    {
+        printf("\nTable of %d\n", i);
+
+        for(j = 1; j <= 10; j++)
+        {
+            printf("%d x %d = %d\n", i, j, i * j);
+        }
+    }
+}*/
+/*//to find the max element in array
+#include <stdio.h>
+void main()
+{
+    int a[100], n, i, max;
+    printf("Enter size: ");
+    scanf("%d", &n);
+    printf("Enter array elements:\n");
+    for(i=0; i<n; i++)
+        scanf("%d", &a[i]);
+
+    max = a[0];
+
+    for(i=1; i<n; i++)
+    {
+        if(a[i] > max)
+            max = a[i];
+    }
+    printf("Maximum element = %d", max);
+}*/
+/*//to find second largest element in array
+#include <stdio.h>
+void main()
+{
+    int a[100], n, i;
+    int largest, second;
+    printf("Enter size: ");
+    scanf("%d", &n);
+    printf("Enter elements:\n");
+    for(i=0; i<n; i++)
+        scanf("%d", &a[i]);
+
+    largest = second = a[0];
+
+    for(i=1; i<n; i++)
+    {
+        if(a[i] > largest)
+        {
+            second = largest;
+            largest = a[i];
+        }
+        else if(a[i] > second && a[i] != largest)
+        {
+            second = a[i];
+        }
+    }
+
+    printf("Second Largest = %d", second);
+}*/
+/*//to print and count unique element in array
+#include <stdio.h>
+void main()
+{
+    int a[100], n, i, j, count;
+    printf("Enter size: ");
+    scanf("%d", &n);
+    printf("Enter elements:\n");
+    for(i=0; i<n; i++)
+        scanf("%d", &a[i]);
+
+    count = 0;
+
+    printf("Unique elements: ");
+
+    for(i=0; i<n; i++)
+    {
+        int c = 0;
+
+        for(j=0; j<n; j++)
+        {
+            if(a[i] == a[j])
+                c++;
+        }
+
+        if(c == 1)
+        {
+            printf("%d ", a[i]);
+            count++;
+        }
+    }
+
+    printf("\nCount = %d", count);
+}*/
+/*//to count and print dublicate element in array
+#include <stdio.h>
+void main()
+{
+    int a[100], n, i, j, count = 0;
+    printf("Enter size: ");
+    scanf("%d", &n);
+    printf("Enter elements:\n");
+    for(i=0; i<n; i++)
+        scanf("%d", &a[i])
+    printf("Duplicate elements: ");
+
+    for(i=0; i<n; i++)
+    {
+        int c = 0;
+
+        for(j=0; j<n; j++)
+        {
+            if(a[i] == a[j])
+                c++;
+        }
+
+        if(c > 1)
+        {
+            int first = 1;
+            for(j=0; j<i; j++)
+            {
+                if(a[i] == a[j])
+                    first = 0;
+            }
+
+            if(first)
+            {
+                printf("%d ", a[i]);
+                count++;
+            }
+        }
+    }
+
+    printf("\nCount = %d", count);
+}*/
+/*//to merge two array into a third array
+#include <stdio.h>
+void main()
+{
+    int a[50], b[50], c[100];
+    int n1, n2, i;
+    printf("Enter size of first array: ");
+    scanf("%d", &n1);
+    printf("Enter first array:\n");
+    for(i=0; i<n1; i++)
+        scanf("%d", &a[i]);
+
+    printf("Enter size of second array: ");
+    scanf("%d", &n2);
+
+    printf("Enter second array:\n");
+    for(i=0; i<n2; i++)
+        scanf("%d", &b[i]);
+
+    for(i=0; i<n1; i++)
+        c[i] = a[i];
+
+    for(i=0; i<n2; i++)
+        c[n1+i] = b[i];
+
+    printf("Merged array:\n");
+
+    for(i=0; i<n1+n2; i++)
+        printf("%d ", c[i]);
+}*/
+/*//to print even and odd element in array
+#include <stdio.h>
+void main()
+{
+    int a[100], n, i, sum = 0;
+    printf("Enter size: ");
+    scanf("%d", &n)
+    printf("Enter elements:\n");
+    for(i=0; i<n; i++)
+        scanf("%d", &a[i]);
+
+    printf("Even elements: ");
+
+    for(i=0; i<n; i++)
+    {
+        if(a[i] % 2 == 0)
+        {
+            printf("%d ", a[i]);
+            sum += a[i];
+        }
+    }
+
+    printf("\nSum = %d", sum);
+}*/
+/*//to check prime number is present or not
+#include <stdio.h>
+void main()
+{
+    int a[100], n, i, j, count, found = 0;
+    printf("Enter size: ");
+    scanf("%d", &n);
+    printf("Enter elements:\n");
+    for(i=0; i<n; i++)
+        scanf("%d", &a[i]);
+
+    for(i=0; i<n; i++)
+    {
+        count = 0;
+
+        for(j=1; j<=a[i]; j++)
+        {
+            if(a[i] % j == 0)
+                count++;
+        }
+        if(count == 2)
+        {
+            printf("Prime number found: %d", a[i]);
+            found = 1;
+            break;
+        }
+    }
+    if(found == 0)
+        printf("No prime number present.");
+}*/
+/*//to sort an array using a pointer
+#include <stdio.h>
+void main()
+{
+    int a[100], n, i, j, temp;
+    int *p;
+    printf("Enter size: ");
+    scanf("%d", &n);
+    printf("Enter array elements:\n");
+    for(i = 0; i < n; i++)
+        scanf("%d", &a[i]);
+
+    p = a;
+    for(i = 0; i < n - 1; i++)
+    {
+        for(j = i + 1; j < n; j++)
+        {
+            if(*(p + i) > *(p + j))
+            {
+                temp = *(p + i);
+                *(p + i) = *(p + j);
+                *(p + j) = temp;
+            }
+        }
+    }
+    printf("Sorted array:\n");
+    for(i = 0; i < n; i++)
+        printf("%d ", *(p + i));
+}*/
+/*//to search an element in array using a pointer
+#include <stdio.h>
+void main()
+{
+    int a[100], n, i, key, found = 0;
+    int *p;
+    printf("Enter size: ");
+    scanf("%d", &n);
+    printf("Enter array elements:\n");
+    for(i = 0; i < n; i++)
+        scanf("%d", &a[i]);
+
+    printf("Enter element to search: ");
+    scanf("%d", &key);
+    p = a;
+    for(i = 0; i < n; i++)
+    {
+        if(*(p + i) == key)
+        {
+            printf("Element found at position %d", i + 1);
+            found = 1;
+            break;
+        }
+    }
+    if(found == 0)
+        printf("Element not found");
+}*/
+/*//reversing of string
+#include <stdio.h>
+#include <string.h>
+void main()
+{
+    char str[100];
+    int i, len;
+    printf("Enter a string: ");
+    scanf("%s", str);
+
+    len = strlen(str);
+
+    printf("Reversed string: ");
+
+    for(i = len - 1; i >= 0; i--)
+    {
+        printf("%c", str[i]);
+    }
+}*/
+/*//to check the string is palandrome or not
+#include <stdio.h>
+#include <string.h>
+void main()
+{
+    char str[100];
+    int i, len, flag = 1;
+    printf("Enter a string: ");
+    scanf("%s", str);
+
+    len = strlen(str);
+    for(i = 0; i < len / 2; i++)
+    {
+        if(str[i] != str[len - i - 1])
+        {
+            flag = 0;
+            break;
+        }
+    }
+    if(flag)
+        printf("Palindrome String");
+    else
+        printf("Not a Palindrome String");
+}*/
+/*to count the vowel or consonant in an array
+#include <stdio.h>
+void main()
+{
+    char str[100];
+    int i, vowel = 0, consonant = 0;
+    printf("Enter a string: ");
+    scanf("%s", str);
+
+    for(i = 0; str[i] != '\0'; i++)
+    {
+        if(str[i]=='a'||str[i]=='e'||str[i]=='i'||str[i]=='o'||str[i]=='u'||
+           str[i]=='A'||str[i]=='E'||str[i]=='I'||str[i]=='O'||str[i]=='U')
+            vowel++;
+        else
+            consonant++;
+    }
+    printf("Vowels = %d\n", vowel);
+    printf("Consonants = %d", consonant);
+}*/
+/*//to convert string lower to upper
+#include <stdio.h>
+void main()
+{
+    char str[100];
+    int i;
+    printf("Enter a string: ");
+    scanf("%s", str);
+
+    for(i = 0; str[i] != '\0'; i++)
+    {
+        if(str[i] >= 'a' && str[i] <= 'z')
+            str[i] = str[i] - 32;
+    }
+
+    printf("Uppercase String = %s", str);
+}*/
+/*//to convert string upper to lower
+#include <stdio.h>
+void main()
+{
+    char str[100];
+    int i;
+    printf("Enter a string: ");
+    scanf("%s", str);
+
+    for(i = 0; str[i] != '\0'; i++)
+    {
+        if(str[i] >= 'A' && str[i] <= 'Z')
+            str[i] = str[i] + 32;
+    }
+
+    printf("Lowercase String = %s", str);
+}*/
+/*//to copy a string
+#include <stdio.h>
+void main()
+{
+    char str1[100], str2[100];
+    int i;
+    printf("Enter a string: ");
+    scanf("%s", str1);
+
+    for(i = 0; str1[i] != '\0'; i++)
+    {
+        str2[i] = str1[i];
+    }
+    str2[i] = '\0';
+
+    printf("Copied String = %s", str2);
+}*/
+/*//to copy the data from one file to another file
+#include <stdio.h>
+void main()
+{
+    FILE *fp1, *fp2;
+    char ch;
+    fp1 = fopen("source.txt", "r");
+
+    if(fp1 == NULL)
+    {
+        printf("Source file not found.");
+        return;
+    }
+    fp2 = fopen("destination.txt", "w");
+    while((ch = fgetc(fp1)) != EOF)
+    {
+        fputc(ch, fp2);
+    }
+    printf("File copied successfully.");
+    fclose(fp1);
+    fclose(fp2);
+}*/
+/*
+//Write a program to check whether number is divisible by both 4 and 6
+#include <stdio.h>
+void main() 
+{
+    int num;
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    if (num % 4 == 0 && num % 6 == 0) 
+	{
+        printf("%d is divisible by both 4 and 6.\n", num);
+    } else 
+	{
+        printf("%d is not divisible by both 4 and 6.\n", num);
+    }
+}
+*/
+/*
+2.//Write a program to check whether a number is divisible by 2 but not by 5
+#include <stdio.h>
+void main() 
+{
+    int num;
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    if (num % 2 == 0 && num % 5 != 0) 
+	{
+        printf("%d is divisible by 2 but not by 5.\n", num);
+    } else 
+	{
+        printf("%d does not satisfy the condition.\n", num);
+    }
+}
+*/
+/*
+//3.Write a program to determine whether a student gets a scholarship based on marks and
+attendence
+#include <stdio.h>
+void main() 
+{
+    int marks, attendance;
+    printf("Enter student's marks: ");
+    scanf("%d", &marks);
+
+    printf("Enter student's attendance percentage: ");
+    scanf("%d", &attendance);
+    if (marks >= 75 && attendance >= 80) 
+	{
+        printf("The student is eligible for a scholarship.\n");
+    } else 
+	{
+        printf("The student is not eligible for a scholarship.\n");
+    }
+}
+/*
+4.//Write a program to classify a person as child ,teenager,adult or senior citizen
+#include <stdio.h>
+void main()
+{
+int age;
+printf("Enter age: ");
+scanf("%d", &age);
+if (age >= 0 && age <= 12)
+{
+printf("Category: Child\n");
+}
+}
+}
+}
+}
+else if (age >= 13 && age <= 19)
+{
+printf("Category: Teenager\n");
+else if (age >= 20 && age <= 59)
+{
+printf("Category: Adult\n");
+else if (age >= 60)
+{
+printf("Category: Senior Citizen\n");
+else
+{
+printf("Invalid age entered.\n");
+}
+*/
+/*
+5.//Write a program to check whether three sides can form a valid triangle
+#include <stdio.h>
+void main()
+{
+}
+float a, b, c;
+printf("Enter three sides of the triangle: ");
+scanf("%f %f %f", &a, &b, &c);
+if ((a + b > c) && (a + c >b) &&(b + c>a))
+{
+printf("The sides can form a valid triangle.\n");
+}
+}
+else
+{
+printf("The sides CANNOT form a valid triangle.\n");
+*/
+/*
+6.//Write a program to find the middle value among three numbers
+#include <stdio.h>
+void main()
+{
+int a, b, c;
+printf("Enter three unique numbers: ");
+scanf("%d %d %d", &a, &b, &c);
+if ((a > b && a < c) || (a < b && a >c))
+{
+printf("Middle value is: %d\n", a);
+}
+}
+}
+}
+else if ((b > a && b < c) || (b < a && b > c))
+{
+printf("Middle value is: %d\n", b);
+else
+{
+printf("Middle value is: %d\n", c);
+*/
+/*
+7.//Write a program to find the roots of given quadratic equations
+#include <stdio.h>
+void main()
+{
+float a, b, c, d, r1, r2, real, imag;
+printf("Enter coefficients a, b and c: ");
+scanf("%f %f %f", &a, &b, &c);
+d =(b * b)- (4 * a * c);
+if (d > 0)
+{
+r1 = (-b + sqrt(d)) / (2 * a);
+r2 = (-b- sqrt(d)) / (2 * a);
+}
+printf("Real and distinct roots: %.2f and %.2f\n", r1, r2);
+else if (d == 0)
+{
+r1 = r2 =-b / (2 * a);
+printf("Real and equal roots: %.2f and %.2f\n", r1, r2);
+}
+}
+}
+else
+{
+real =-b / (2 * a);
+imag = sqrt(-d) / (2 * a);
+printf("Complex roots: %.2f + %.2fi and %.2f- %.2fi\n", real, imag, real, imag);
+*/
+/*
+8.//Write a program to calculate a Insurance Premium Category
+//
+Criteria
+// Age<25-->High Premium
+// Age25-50-->Medium Premium
+// Age>50-->Low Premium
+#include <stdio.h>
+void main()
+{
+int age;
+printf("Enter age: ");
+scanf("%d", &age);
+if (age < 25)
+{
+printf("Insurance Premium: High Premium\n");
+}
+}
+}
+}
+}
+else if (age >= 25 && age <= 50)
+{
+printf("Insurance Premium: Medium Premium\n");
+else if (age > 50)
+{
+printf("Insurance Premium: Low Premium\n");
+else
+{
+printf("Invalid age.\n");
+*/
+/*
+9.//Write a program to display the month name using switch case
+#include <stdio.h>
+void main()
+{
+int month;
+printf("Enter month number (1-12): ");
+scanf("%d", &month);
+switch(month)
+{
+case 1: printf("January\n"); break;
+case 2: printf("February\n"); break;
+case 3: printf("March\n"); break;
+case 4: printf("April\n"); break;
+case 5: printf("May\n"); break;
+case 6: printf("June\n"); break;
+case 7: printf("July\n"); break;
+case 8: printf("August\n"); break;
+case 9: printf("September\n"); break;
+case 10: printf("October\n"); break;
+case 11: printf("November\n"); break;
+case 12: printf("December\n"); break;
+default: printf("Invalid month number!\n");
+}
+}
+*/
+/*
+10.//Write a program to display the day of the week using switch case
+#include <stdio.h>
+void main()
+{
+int day;
+printf("Enter day number (1-7): ");
+scanf("%d", &day);
+switch(day)
+{
+case 1: printf("Sunday\n"); break;
+case 2: printf("Monday\n"); break;
+case 3: printf("Tuesday\n"); break;
+case 4: printf("Wednesday\n"); break;
+case 5: printf("Thursday\n"); break;
+case 6: printf("Friday\n"); break;
+case 7: printf("Saturday\n"); break;
+default: printf("Invalid day number!\n");
+}
+}
+*/
+/*
+11.//Write a program to perform arithmetic operations using switch case
+#include <stdio.h>
+void main()
+{
+char op;
+float num1, num2;
+printf("Enter an operator (+,-, *, /): ");
+scanf(" %c", &op);
+printf("Enter two numbers: ");
+scanf("%f %f", &num1, &num2);
+switch(op)
+{
+case '+': printf("Result: %.2f\n", num1 + num2); break;
+case '-': printf("Result: %.2f\n", num1- num2); break;
+case '*': printf("Result: %.2f\n", num1 * num2); break;
+case '/':
+if(num2 != 0)
+printf("Result: %.2f\n", num1 / num2);
+else
+printf("Error! Division by zero.\n");
+break;
+default: printf("Invalid Operator!\n");
+}
+}
+*/
+/*
+12.//Write a program to display the number of days in a month using switch case
+#include <stdio.h>
+void main()
+{
+int month;
+printf("Enter month number (1-12): ");
+scanf("%d", &month);
+switch(month)
+{
+case 1: case 3: case 5: case 7: case 8: case 10: case 12:
+printf("31 Days\n");
+break;
+case 4: case 6: case 9: case 11:
+printf("30 Days\n");
+break;
+case 2:
+printf("28 or 29 Days (Leap Year dependent)\n");
+break;
+default:
+printf("Invalid month number!\n");
+}
+}
+*/
+/*
+13.//Write a program to determine whether a person is eligible for driving licence
+#include <stdio.h>
+void main()
+{
+}
+int age;
+printf("Enter age: ");
+scanf("%d", &age);
+if (age >= 18)
+{
+printf("Eligible for driving license.\n");
+}
+}
+else
+{
+printf("NOT eligible for driving license. Wait %d more year(s).\n", 18- age);
+*/
+/*
+14.//Write a program to check whether a character is a vowel,consonant,digit,or special character
+#include <stdio.h>
+void main()
+{
+char ch;
+printf("Enter any character: ");
+scanf(" %c", &ch);
+if ((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z')) {
+if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u' ||
+ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U')
+{
+printf("It is a Vowel.\n");
+}
+}
+}
+else
+{
+printf("It is a Consonant.\n");
+else if (ch >= '0' && ch <= '9')
+{
+printf("It is a Digit.\n");
+}
+}
+}
+else
+{
+printf("It is a Special Character.\n");
+*/
+/*
+15.//Write a program to determine admission eligibility based on marks in three subjects using
+nested if-else
+#include <stdio.h>
+void main()
+{
+int m1, m2, m3;
+printf("Enter marks for Subject 1, 2, and 3: ");
+scanf("%d %d %d", &m1, &m2, &m3);
+// Criteria rule: Cut-off at 50 for each subject, and total over 160
+if (m1 >= 50)
+{
+if (m2 >= 50)
+{
+if (m3 >= 50)
+{
+if ((m1 + m2 + m3) >= 160)
+{
+printf("Eligible for admission.\n");
+}
+}
+}
+else
+{
+printf("Not Eligible: Total marks are below requirement.\n");
+else
+{
+printf("Not Eligible: Failed Subject 3 cut-off.\n");
+}
+}
+else
+{
+printf("Not Eligible: Failed Subject 2 cut-off.\n");
+}
+}
+else
+{
+printf("Not Eligible: Failed Subject 1 cut-off.\n");
+}
+}
+*/
+/*
+16.//Write a program to determine the type of angle (Acute,Right,Obtuse,Straight)
+#include <stdio.h>
+void main()
+{
+float angle;
+printf("Enter the angle in degrees: ");
+scanf("%f", &angle);
+if (angle > 0 && angle < 90)
+{
+printf("Acute Angle\n");
+}
+else if (angle == 90)
+{
+printf("Right Angle\n");
+}
+else if (angle > 90 && angle < 180)
+{
+printf("Obtuse Angle\n");
+}
+}
+}
+}
+else if (angle == 180)
+{
+printf("Straight Angle\n");
+else
+{
+printf("Reflex or alternate angle value.\n");
+*/
+/*
+17.//Write a program to check student is either pass,fail or supply
+#include <stdio.h>
+void main()
+{
+int marks;
+printf("Enter marks (0-100): ");
+scanf("%d", &marks);
+if (marks >= 40)
+{
+printf("Result: PASS\n");
+}
+else if (marks >= 30 && marks < 40)
+{
+printf("Result: SUPPLY (Compartment)\n");
+}
+}
+}
+else
+{
+printf("Result: FAIL\n");
+*/
+/*
+18.//Write a program to find a greater b/w 3 numbers using switch case
+#include <stdio.h>
+void main()
+{
+}
+int a, b, c, choice;
+printf("Enter three numbers: ");
+scanf("%d %d %d", &a, &b, &c);
+choice = (a > b && a > c) ? 1: ((b > c) ? 2 : 3);
+switch(choice)
+{
+case 1: printf("Greater number is: %d\n", a); break;
+case 2: printf("Greater number is: %d\n", b); break;
+case 3: printf("Greater number is: %d\n", c); break;
+}
+*/
+/*
+19.//Write a program to check the co-ordinate point x and y are lies in which quadrant
+#include <stdio.h>
+void main()
+{
+int x, y;
+printf("Enter coordinate points (x y): ");
+scanf("%d %d", &x, &y);
+if (x > 0 && y >0)
+{
+printf("The point (%d,%d) lies in Quadrant I.\n", x, y);
+}
+}
+}
+}
+}
+else if (x < 0 && y > 0)
+{
+printf("The point (%d,%d) lies in Quadrant II.\n", x, y);
+else if (x < 0 && y < 0)
+{
+printf("The point (%d,%d) lies in Quadrant III.\n", x, y);
+else if (x > 0 && y < 0)
+{
+printf("The point (%d,%d) lies in Quadrant IV.\n", x, y);
+else if (x == 0 && y == 0)
+{
+printf("The point is at the Origin.\n");
+else
+{
+printf("The point lies on an Axis.\n");
+}
+}
+*/
+/*
+20.//Write a program to calculate the area of different shape using switch case menu driven
+programming
+#include <stdio.h>
+void main()
+{
+int choice;
+float rad, len, bre, side, area;
+printf("--- Shape Area Calculator---\n");
+printf("1. Circle\n2. Rectangle\n3. Square\n");
+printf("Enter your choice: ");
+scanf("%d", &choice);
+switch(choice)
+{
+case 1:
+printf("Enter radius: ");
+scanf("%f", &rad);
+area = 3.14159 * rad * rad;
+printf("Area of Circle: %.2f\n", area);
+break;
+case 2:
+printf("Enter length and breadth: ");
+scanf("%f %f", &len, &bre);
+area = len * bre;
+printf("Area of Rectangle: %.2f\n", area);
+break;
+case 3:
+printf("Enter side length: ");
+scanf("%f", &side);
+area = side * side;
+printf("Area of Square: %.2f\n", area);
+break;
+default:
+printf("Invalid Choice!\n");
+}
+*/
+/*
+21.//Write a program to counting natural number from 1 to n
+#include <stdio.h>
+void main()
+{
+int i, n;
+printf("Enter value of n: ");
+scanf("%d", &n);
+for(i = 1; i <= n; i++)
+{
+printf("%d ", i);
+}
+printf("\n");
+}
+*/
+/*
+22.//Write a program to counting natural number from 1 to n
+#include <stdio.h>
+void main()
+{
+}
+int i, n;
+printf("Enter value of n: ");
+scanf("%d", &n);
+for(i = 1; i <= n; i++)
+{
+printf("%d ", i);
+}
+printf("\n");
+*/
+/*
+23.//Write a program to print a counting of square of even natural number from 1 to n
+#include <stdio.h>
+void main()
+{
+}
+int i, n;
+printf("Enter value of n: ");
+scanf("%d", &n);
+for(i = 1; i <= n; i++)
+{
+if(i % 2 == 0)
+{
+printf("%d ", i * i);
+}
+}
+printf("\n");
+*/
+/*
+24.//Write a program to print a counting of square of natural number from 1 to n
+#include <stdio.h>
+void main()
+{
+int i, n;
+printf("Enter value of n: ");
+scanf("%d", &n);
+for(i = 1; i <= n; i++)
+{
+printf("%d ", i * i);
+}
+printf("\n");
+}
+*/
+/*
+25.//Write a program to print a counting of square of odd natural number from 1 to n
+#include <stdio.h>
+void main()
+{
+}
+int i, n;
+printf("Enter value of n: ");
+scanf("%d", &n);
+for(i = 1; i <= n; i++)
+{
+if(i % 2 != 0)
+{
+printf("%d ", i * i);
+}
+}
+printf("\n");*/
+/*1.//Print numbers from 1 to n
+#include <stdio.h>
+void main()
+{
+}
+int i, n;
+printf("Enter the value of n: ");
+scanf("%d", &n);
+for(i = 1; i <= n; i++)
+{
+printf("%d ", i);
+}
+*/
+/*
+2.//Print numbers from 10 to n
+#include <stdio.h>
+void main()
+{
+}
+int i, n;
+printf("Enter the value of n (greater than or equal to 10): ");
+scanf("%d", &n);
+for(i = 10; i <= n; i++)
+{
+printf("%d ", i);
+}
+*/
+/*
+3.//Print all even numbers b/w 1 and n
+#include <stdio.h>
+void main()
+{
+}
+int i, n;
+printf("Enter the value of n: ");
+scanf("%d", &n);
+for(i = 1; i <= n; i++)
+{
+if(i % 2 == 0)
+{
+printf("%d ", i);
+}
+}
+*/
+/*
+4.//Print all odd numbers b/w 1 and n
+#include <stdio.h>
+void main()
+{
+int i, n;
+printf("Enter the value of n: ");
+scanf("%d", &n);
+for(i = 1; i <= n; i++)
+{
+if(i % 2 != 0)
+{
+printf("%d ", i);
+}
+}
+}
+*/
+/*
+5.//Find the sum of numbers from 1 to N
+#include <stdio.h>
+void main()
+{
+}
+int i, n, sum = 0;
+printf("Enter the value of n: ");
+scanf("%d", &n);
+for(i = 1; i <= n; i++)
+{
+sum +=i;
+}
+printf("Sum of numbers from 1 to %d is: %d\n", n, sum);
+*/
+/*
+6.//Find the factorial of a given number
+#include <stdio.h>
+void main()
+{
+int i, num;
+long long fact = 1;
+printf("Enter a number: ");
+scanf("%d", &num);
+for(i = 1; i <= num; i++)
+{
+fact *= i;
+}
+printf("Factorial of %d is: %lld\n", num, fact);
+}
+*/
+/*
+7. //Print the multiplication table of a given number
+#include <stdio.h>
+void main()
+{
+}
+int i, num;
+printf("Enter a number: ");
+scanf("%d", &num);
+printf("Multiplication table of %d:\n", num);
+for(i = 1; i <= 10; i++)
+{
+printf("%d x %d = %d\n", num, i, num * i);
+}
+*/
+/*
+8. //Check whether a number is prime or not
+#include <stdio.h>
+void main()
+{
+int i, num, isPrime = 1;
+printf("Enter a number: ");
+scanf("%d", &num);
+if(num <= 1)
+{
+isPrime = 0;
+}
+else
+{
+for(i = 2; i <= num / 2; i++)
+{
+if(num % i == 0)
+{
+isPrime = 0;
+break;
+}
+}
+}
+if(isPrime == 1)
+{
+printf("%d is a Prime number.\n", num);
+}
+}
+}
+else
+{
+printf("%d is NOT a Prime number.\n", num);
+*/
+/*
+9. //Find the HCF (GCD) of two numbers using loops
+#include <stdio.h>
+void main()
+{
+int n1, n2, i, hcf = 1;
+printf("Enter two numbers: ");
+scanf("%d %d", &n1, &n2);
+for(i = 1; i <= n1 && i <= n2; i++)
+{
+if(n1 % i == 0 && n2 %i ==0)
+{
+hcf = i;
+}
+}
+printf("HCF of %d and %d is: %d\n", n1, n2, hcf);
+}
+*/
+/*
+10.//for loop: LCM
+#include<stdio.h>
+void main()
+{
+int n1,n2,max;
+printf("Enter the value of n1 and n2 : ");
+scanf("%d%d",&n1,&n2);
+max =(n1>n2)?n1:n2;
+for(;1;)
+{
+if(max%n1==0&&max%n2==0)
+{
+}
+break;
+max++;
+}
+printf("LCM of two number are : %d",max);
+}
+*/
+/*
+11. //Generate the Fibonacci series up to N terms
+#include <stdio.h>
+void main()
+{
+}
+int n, i, t1 = 0, t2 = 1, nextTerm;
+printf("Enter the number of terms: ");
+scanf("%d", &n);
+printf("Fibonacci Series: ");
+for(i = 1; i <= n; i++)
+{
+printf("%d ", t1);
+nextTerm = t1 + t2;
+t1 = t2;
+t2 = nextTerm;
+}
+*/
+/*
+12. //Print all factors of a number
+#include <stdio.h>
+void main()
+{
+int i, num;
+printf("Enter a number: ");
+scanf("%d", &num);
+printf("Factors of %d are: ", num);
+for(i = 1; i <= num; i++)
+{
+if(num % i == 0)
+{
+printf("%d ", i);
+}
+}
+}
+*/
+/*
+13. //Count the total number of factors of a number
+#include <stdio.h>
+void main()
+{
+}
+int i, num, count = 0;
+printf("Enter a number: ");
+scanf("%d", &num);
+for(i = 1; i <= num; i++)
+{
+if(num % i == 0)
+{
+count++;
+}
+}
+printf("Total number of factors for %d is: %d\n", num, count);
+*/
+/*
+14. //Find the power of a number (a^b) using loop
+#include <stdio.h>
+void main()
+{
+int base, exp, i;
+long long result = 1;
+printf("Enter base (a): ");
+scanf("%d", &base);
+printf("Enter exponent (b): ");
+scanf("%d", &exp);
+for(i = 1; i <= exp; i++)
+{
+result *= base;
+}
+printf("%d raised to the power of %d is: %lld\n", base, exp, result);
+}
+*/
+/*
+15. //loop : 9,99,999,9999,-----,n
+#include<stdio.h>
+void main()
+{
+}
+int n,i;
+long long num =0;
+printf("Enter number of term : ");
+scanf("%d",&n);
+for(i=0;i<=n;i++)
+{
+}
+num=num*10+9;
+printf("%d",num);
+*/
+/*
+16. //Print the series 1 11 111 1111. ....
+#include <stdio.h>
+void main()
+{
+int i, terms;
+long long term = 1;
+printf("Enter the number of terms: ");
+scanf("%d", &terms);
+printf("Series: ");
+for(i = 1; i <= terms; i++)
+{
+printf("%lld ", term);
+term = (term * 10) + 1;
+}
+}
+*/
