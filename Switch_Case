@@ -1,0 +1,763 @@
+Que1.Write a programme to check a number is divisible by both 4 and 6.
+#include<stdio.h>
+void main()
+{
+	int num;
+	printf("Enter a number\n");
+	scanf("%d",&num);
+	//Switch case
+	switch(num%4==0 && num%6==0)
+	{
+	  	case 0:
+	  		printf("Number is not divisible by both 4 and 6.");
+	  		break;
+	  	case 1:
+	  		printf("Number is divisible by both 4 and 6.");
+	}
+}
+
+Que2.Write a programme to check whether a number is divisible by 2 but not by 5.
+#include<stdio.h>
+void main()
+{
+	int num;
+	printf("Enter a number.\n");
+	scanf("%d",&num);
+	//Switch case
+	switch(num%2==0 && num%5!=0)
+	{
+		case 0:
+			printf("Number is divisible by 2 and by 5");
+			break;
+		case 1:
+			printf("Number is divisible by 2 but not by 5");
+	}
+}
+
+Que3.Write a programme to determine whether a student gets a scholarship based on marks and attendance.
+#include<stdio.h>
+void main()
+{
+	int marks,att;
+	printf("Enter marks\n");
+	scanf("%d",&marks);
+	printf("Enter attendance\n");
+	scanf("%d",&att);
+	//If case
+	if((marks<=0 || marks>=100) || (att<=0 || att>=100))
+	{
+		printf("Marks or attendance are not valid!!");
+	}
+	else
+	{
+	switch((marks>=75 && marks<=100) && (att>=75 && marks<=100))
+	{  
+		case 0:
+			printf("Sorry,You are not elligible for scholarship.");
+			break;
+		case 1:
+			printf("Congratulation,You get scholarship!!");
+			break;
+	}
+    }
+}
+
+Que4.Write a programme to classify a person as Child,Teenage,Adult or Senior citizen.
+/*If your switch expression is a logical condition, it will only ever be 0 or 1.
+If your switch expression is a normal integer or char value, it can match many cases*/
+#include<stdio.h>
+void main()
+{
+	int age;
+	printf("Enter your age.\n");
+	scanf("%d",&age);
+	//Switch case
+	switch(age/10)
+	{
+		case 0:
+		  printf("Child");
+		  break;
+		case 1:
+		   printf("Teenager");
+		   break;
+		case 2:
+		case 3:
+		case 4:
+		case 5:
+		case 6:
+		  printf("Adult");
+		  break;
+		case 7:
+		case 8:
+	    case 9:
+			printf("Old age");
+			break;
+		default:
+			printf("Age is incorrect")
+	}
+}
+
+Que5.Write a programme to check whether three sides can form a valid triangle.
+#include<stdio.h>
+void main()
+{
+	int a,b,c;
+	printf("Enter three sides of triangle.\n");
+	scanf("%d%d%d",&a,&b,&c);
+	//Switch case
+	switch((a+b>c) && (a+c>b) && (b+c>a))
+	{
+		case 0:
+			printf("Three sides can not form a valid triangle");
+			break;
+		case 1:
+			printf("Three sides can form a valid triangle.");
+	}
+}
+
+Que6.Write a programme to find the middle value among three numbers.
+/*Normally, you cannot write conditions like (a > b && a < c) directly in a case, because cases must be constants.
+But conditions evaluate to 0 (false) or 1 (true).
+If you write switch(1), then only those case labels that evaluate to 1 will match.*/
+//#include<stdio.h>
+//void main()
+//{
+//	int a,b,c;
+//	printf("Enter three numbers.\n");
+//	scanf("%d%d%d",&a,&b,&c);
+//	//Switch case
+//	switch(1)
+//	{
+//		case((a>b && a<c) || (a>c && a<b)):
+//			printf("%d is middle number",a);
+//			break;
+//		case((b>a && b<c) || (b>c && b<a)):
+//			printf("%d is middle number",b);
+//			break;
+//		case((c>a && c<b) || (c>b && c>a)):
+//			printf("%d is middle number",c);
+//			break;
+//		case(a==b && b==c):
+//			printf("All numbers are equal.");
+//		default:
+//			printf("Numbers are invalid");
+//	}
+//}This code give error, case label does not reduce an integer constant
+
+/*#include <stdio.h>
+void main() {
+    int a, b, c, middle;
+
+    printf("Enter three numbers:\n");
+    scanf("%d %d %d", &a, &b, &c);
+
+    // Decide which number is middle
+    if((a > b && a < c) || (a > c && a < b))
+        middle = 1;   // a is middle
+    else if((b > a && b < c) || (b > c && b < a))
+        middle = 2;   // b is middle
+    else if((c > a && c < b) || (c > b && c < a))
+        middle = 3;   // c is middle
+    else
+        middle = 0;   // all equal or invalid
+
+    // Switch on the result
+    switch(middle) {
+        case 1:
+            printf("%d is middle number\n", a);
+            break;
+        case 2:
+            printf("%d is middle number\n", b);
+            break;
+        case 3:
+            printf("%d is middle number\n", c);
+            break;
+        case 0:
+            printf("All numbers are equal or invalid\n");
+            break;
+    }
+}
+*/
+
+#include <stdio.h>
+void main() {
+    int a,b,c,middle;
+    printf("Enter three numbers:\n");
+    scanf("%d %d %d", &a, &b, &c);
+    // Check if a is middle
+    switch((a > b && a < c) || (a > c && a < b)) {
+    case 1:
+        printf("a is middle\n");
+        break;
+    }
+
+    // Check if b is middle
+    switch((b > a && b < c) || (b > c && b < a)) {
+    case 1:
+        printf("b is middle\n");
+        break;
+    }
+
+    // Check if c is middle
+    switch((c > a && c < b) || (c > b && c < a)) {
+    case 1:
+        printf("c is middle\n");
+        break;
+    }
+}
+
+Que7.Write a programme find the roots of given quadratic equation.
+#include<stdio.h>
+#include<math.h>
+void main()
+{
+	int a,b,c,d,x,y;
+	printf("Enter coefficient of quadratic equation a,b and c respectively.\n");
+	scanf("%d%d%d",&a,&b,&c);
+	d=(b*b)-(4*a*c);
+	if(d>0)
+	{
+		printf("Roots are real and distinct\n");
+		x=(-b+sqrt(d))/2*a;
+		y=(-b-sqrt(d))/2*a;
+		printf("Roots are %d,%d",x,y);
+	}
+	else if(d<0)
+	{
+		printf("Roots are imaginary");
+	}
+	else if(d=0)
+	{
+		printf("Roots are real and equal\n");
+		x=-b/(2*a);
+		printf("Roots are %d %d",x,x);
+	}
+	}
+
+Que8.Write a programme to calculate a Insurance Premium Category.
+#include<stdio.h>
+void main()
+{
+	int age;
+	printf("Enter your age\n");
+	scanf("%d",&age);
+	if(age>0 && age<25)
+	{
+		printf("You have high insurance premium category.");
+	}
+	else if(age>25 && age<50)
+	{
+		printf("You have medium insurance premium category.");
+	}
+	else if(age>50 && age<80)
+	{
+		printf("You have low medium insurance premium category.");
+	}
+	else
+	{
+		printf("Age is invalid!!");
+	}
+}
+
+Que9.Write a programme to display the month name using switch case.
+#include<stdio.h>
+void main()
+{
+	int num;
+	printf("Enter a number(0-12)\n");
+	scanf("%d",&num);
+	switch(num)
+	{
+		case 1:
+			printf("January");
+			break;
+		case 2:
+			printf("Febraury");
+			break;
+		case 3:
+			printf("March");
+		    break;
+		case 4:
+			printf("April");
+			break;
+		case 5:
+			printf("May");
+			break;
+		case 6:
+			printf("June");
+			break;
+		case 7:
+			printf("July");
+			break;
+		case 8:
+			printf("August");
+			break;
+		case 9:
+			printf("September");
+	        break;
+	    case 10:
+	    	printf("October");
+	    	break;
+	    case 11:
+	    	printf("November");
+	    	break;
+	    case 12:
+	    	printf("December");
+	    	break;
+	    default:
+	    	printf("Invalid choice");
+}
+}
+
+Que10.Write a programme to display the day of the week using switch case.
+#include<stdio.h>
+void main()
+{
+	int num;
+	printf("Enter a number(1-7)\n");
+	scanf("%d",&num);
+	switch(num)
+	{
+		case 1:
+			printf("Monday");
+			break;
+		case 2:
+			printf("Tuesday");
+			break;
+		case 3:
+			printf("Wednesday");
+			break;
+		case 4:
+			printf("Thursday");
+			break;
+		case 5:
+			printf("Friday");
+			break;
+		case 6:
+			printf("Saturday");
+			break;
+		case 7:
+			printf("Sunday");
+			break;
+		default:
+			printf("Invalid choice!!");
+	}
+}
+
+Que11.Write a programme to perform arithmetic operations using switch case.
+#include<stdio.h>
+void main()
+{
+	int num1,num2;
+	char op;
+
+	printf("Enter two numbers\n");
+	scanf("%d%d",&num1,&num2);
+	//Use " %c" instead of "%c" ? the leading space tells scanf to ignore whitespace (like Enter or spaces).
+	printf("Enter operator\n");
+	scanf(" %c",&op);
+	switch(op)
+	{
+		case '+':
+			printf("Sum = %d",num1+num2);
+			break;
+		case '-':
+		    {
+		    	if(num1>num2)
+		    	   printf("Difference = %d",num1-num2);
+		    	else
+		    	   printf("Difference = %d",num2-num1);
+			}
+			break;
+		case '*':
+		    printf("Multiplication = %d",num1*num2);
+		    break;
+		case '/':
+			{
+				if(num1>num2)
+				    printf("Divide = %d",num1/num2);
+				else
+				    printf("Divide = %d",num2/num1);
+			}
+			break;
+		default:
+			printf("Invalid operator");
+	}
+}
+
+Que12.Write a programme to display the number of day in a month using switch case.
+#include<stdio.h>
+void main()
+{
+	int year,month;
+	printf("Enter month number(1-12)\n");
+	scanf("%d",&month);
+	printf("Enter year\n");
+	scanf("%d",&year);
+	switch(month)
+	{
+		case 1: 
+		case 3:
+		case 5:
+		case 7:
+		case 8:
+		case 10:
+		case 12:
+			printf("Month has 31 days");
+			break;
+		case 4:
+		case 6:
+		case 9:
+		case 11:
+			printf("Month has 30 days");
+			break;
+		case 2:
+			{
+				if((year%400==0) || (year%4==0 && year%4!=0))
+				     printf("Month has 29 days");
+				else
+				    printf("Month has 28 days"); 
+			}
+		    break;
+		default:
+			printf("Invalid choice");
+	}
+}
+
+Que13.Write a programme to determine whether a person is elligible for driving license or not.
+#include<stdio.h>
+void main()
+{
+	int age;
+	printf("Enter your age\n");
+	scanf("%d",&age);
+	switch(age<70 && age>18)
+	{
+		case 0:
+			printf("Sorry, You are not elligible for driving license.");
+			break;
+		case 1:
+			printf("Congratulation, You are elligible for driving license.");
+	}
+}
+
+Que14.Write a programme to check whether a character is vowel,consonant,digit or special character.
+#include<stdio.h>
+void main()
+{ 
+    int type;
+	char ch;
+	printf("Enter character\n");
+	scanf("%c",&ch);
+	//If statement
+	if(ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u'||ch=='A'||ch=='E'||ch=='I'||ch=='O'||ch=='U')
+	   type = 1;
+	else if((ch>='A' && ch<='Z') || (ch>='a' && ch<='z'))
+	   type = 2;
+	else if(ch>='0' && ch<='9')
+	   type = 3;
+	else
+	   type =4;
+	//Switch case
+	switch(type)
+	{
+	   case 1: 
+	       printf("%c is vowel.",ch);
+		   break;
+		case 2:
+		   printf("%c is consonant.",ch);
+		   break;
+		case 3:
+		   printf("%c is digit.",ch);
+		   break;
+		case 4:
+		   printf("%c is special symbol.",ch);	
+	}  
+}
+
+Que15.Write a programme to determine admission eligibility based on marks in three subjects using nested if-else.
+#include<stdio.h>
+void main()
+{
+	int sci,mat,eng,total,per;
+	printf("Enter your english marks.\n");
+	scanf("%d",&eng);
+	printf("Enter your mathematics marks.\n");
+	scanf("%d",&mat);
+	printf("Enter your science marks.\n");
+	scanf("%d",&sci);
+	total=mat+sci+eng;
+	per=total/3;
+	//If statement
+	if(per>=60 && per<=100)
+	{
+		printf("Congratulation!! You are elligible for admission.");
+	}
+	else
+	{
+		printf("Sorry,you are not elligible for admission.");
+	}
+}
+
+Que16.Write a programme to determine the type of angle.
+#include<stdio.h>
+void main()
+{
+	int ang,type;
+	printf("Enter angle.\n");
+	scanf("%d",&ang);
+	//If statement
+	if(ang>0 && ang<90)
+	   type=1;
+	else if(ang==90)
+	   type=2;
+	else if(ang>90 && ang<180)
+	   type=3;
+	else if(ang==180 || ang==0)
+	   type=4;
+	//Switch case
+	switch(type)
+	{
+		case 1:
+			printf("Angle is acute");
+			break;
+		case 2:
+			printf("Angle is right");
+			break;
+		case 3:
+			printf("Angle is obtuse");
+			break;
+		case 4:
+			printf("Angle is straight");
+			break;
+		default:
+			printf("Sorry, we are unable to specify angle");
+	}
+}
+
+Que17.Write a programme to find a greater between 3 numbers using switch case.
+#include<stdio.h>
+void main()
+{
+	int a,b,c,max;
+	printf("Enter three numbers\n");
+	scanf("%d%d%d",&a,&b,&c);
+	//If statement
+	if(a==b && b==c)
+	   max=0;
+	else if(a>b && a>c)
+	   max=1;
+	else if(b>a && b>c)
+	   max=2;
+	else if(c>a && c>b)
+	   max=3;
+	//Switch statement
+	switch(max)
+	{
+		case 0:
+			printf("All numbers are equal");
+			break;
+		case 1:
+			printf("%d is greater",a);
+		    break;
+		case 2:
+			printf("%d is greater",b);
+			break;
+		case 3:
+			printf("%d is greater",c);
+	}
+}
+
+Que18.Write a programme to check either pass,fail or supply.
+#include<stdio.h>
+void main()
+{
+	int per,res;
+	printf("Enter your percentage.\n");
+	scanf("%d",&per);
+	//If statement
+	if(per>=0 && per<33)
+	  res=1;
+	else if(per>=33 && per<50)
+	  res=2;
+	else if(per>=50 && per<=100)
+	  res=3;
+	//Switch statement
+	switch(res)
+	{
+		case 1:
+			printf("Sorry,You are fail.");
+			break;
+		case 2:
+			printf("You have getting supply.");
+			break;
+		case 3:
+			printf("Congratulation,You have passed your class.");
+			break;
+		default:
+			printf("There is invalid input.");
+	}
+}
+
+Que19.Write a programme to check the co-ordinate point x and y are lies in which quadrant.
+#include<stdio.h>
+void main()
+{
+	int x,y,quad;
+	printf("Enter coordinates of x and y.\n");
+	scanf("%d%d",&x,&y);
+	//If statement
+	if(x>0 && y>0)
+	  quad=0;
+	else if(x<0 && y>0)
+	  quad=1;
+	else if(x<0 && y<0)
+	  quad=2;
+	else if(x>0 && y<0)
+	  quad=3;
+	else if(x==0 && (y<0 || y>0))
+	  quad=4;
+	else if(y==0 && (x<0 || x>0))
+	  quad=5;
+	else if(x==0 && y==0)
+	  quad=6;
+	//Switch case
+	switch(quad)
+	{
+		case 0:
+			printf("Coordinate lie in first quadrant.");
+			break;
+		case 1:
+			printf("Coordinate lie in second quadrant.");
+			break;
+		case 2:
+			printf("Coordinate lie in third quadrant.");
+			break;
+		case 3:
+			printf("Coordinate lie in fourth quadrant.");
+			break;
+		case 4:
+			printf("Coordinate lie at x-axis");
+			break;
+		case 5:
+			printf("Coordinate lie at y-axis");
+			break;
+		case 6:
+			printf("Coordinate lie at origin");
+	}
+}
+
+Que20.Write a programme to calculate the area of different shape using switch case menu driven programming.
+#include<stdio.h>
+#define pi 3.14
+void main()
+{
+	int r,s,l,b,area,h,w,choice;
+	printf("Choose a shape for calculating area.\n");
+	printf("Choose 1 for circle\n");
+	printf("Choose 2 for square\n");
+	printf("Choose 3 for rectangle\n");
+	printf("Choose 4 for triangle\n");
+	scanf("%d",&choice);
+	//Switch case 
+	switch(choice)
+	{
+		case 1:
+			printf("Enter the radius of circle.\n");
+			scanf("%d",&r);
+			area=2*pi*r;
+			printf("Area of circle = %d",area);
+		    break;
+		case 2:
+			printf("Enter the side of square\n");
+			scanf("%d",&s);
+			area=s*s;
+			printf("Area of square = %d",area);
+			break;
+		case 3:
+		    printf("Enter the length and breadth of rectangle\n");
+			scanf("%d%d",&l,&w);
+			area=l*w;
+			printf("Area of rectangle = %d",area);
+			break;
+		case 4:
+		    printf("Enter the base and height of triangle\n");
+			scanf("%d%d",&b,&h);
+			area=0.5*b*h;
+			printf("Area of trianglr = %d",area);
+			break;
+		default:
+		    printf("Invalid choice!!");
+	}
+}
+
+Que21.Write a programme to counting natural numbers from 1 to n.
+#include<stdio.h>
+void main()
+{
+	int i,n;
+	printf("Enter a number.\n");
+	scanf("%d",&n);
+	//Loop 
+	for(i=1;i<=n;i++)
+	{
+		printf("%d\t",i);
+	}
+}
+
+Que22.Write a programme to print the counting of even natural number from 1 to n.
+#include<stdio.h>
+void main()
+{
+	int i,n;
+	printf("Enter the ending of series\n");
+	scanf("%d",&n);
+	//Loop
+	for(i=1;i<=n;i++)
+	{
+		if(i%2==0)
+		   printf("%d\t",i);
+	}
+}
+
+Que23.Write a program to print a counting of square of even natural number from 1 to n.
+#include<stdio.h>
+void main()
+{
+	int i,n;
+	printf("Enter ending of series.\n");
+	scanf("%d",&n);
+	//Loop
+	for(i=2;i<=n;i=i+2)
+	{
+		printf("%d\t",i*i);
+	}
+}
+
+Que24.Write a programme to print a counting of square of natural numbers 1 to n.
+#include<stdio.h>
+void main()
+{
+	int i,n;
+	printf("Enter the ending of series.\n");
+	scanf("%d",&n);
+	//Loop
+	for(i=1;i<=n;i++)
+	{
+		printf("%d\t",i*i);
+	}
+}
+
+Que25.Write a programme to print a counting of square of odd natural numbers from 1 to n.
+#include<stdio.h>
+void main()
+{
+	int i,n;
+	printf("Enter the ending of series\n");
+	scanf("%d",&n);
+	//Loop
+	for(i=1;i<=n;i+=2)
+	{
+		printf("%d\t",i*i);
+	}
+}
