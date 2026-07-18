@@ -1,0 +1,145 @@
+Que1.Write a programme to convert a distance from km to mm.
+#include<stdio.h>
+void main()
+{
+	int num1,num2;
+	printf("Enter the value of distance in km\n.");
+	scanf("%d",&num1);
+	num2=num1*1000000;
+	printf("The distance in mm is %d.",num2);
+}
+
+Que2.Write a programme to calculate circumference of circle.
+#include<stdio.h>
+#define pi 3.14
+void main()
+{
+    float r,cir;
+	printf("Enter the radius of circle.\n");
+	scanf("%f",&r);
+	cir=2*pi*r;
+	printf("The circumference of given radius is %.2f.",cir);
+}
+
+Que3.Write a programme to calculate the area of rectangle.
+#include<stdio.h>
+void main()
+{
+	float l,b,area;
+	printf("Enter the length and breadth of rectangle.\n");
+	scanf("%f%f",&l,&b);
+	area=l*b;
+	printf("The area of rectangle is %.2f",area);
+}
+
+Que4.Write a programme to calculate the perimeter of rectangle.
+#include<stdio.h>
+void main()
+{
+	float l,b,per;
+	printf("Enter the length and breadth of rectangle.\n");
+	scanf("%f%f",&l,&b);
+	per=2*(l+b);
+	printf("The perimeter of rectangle is %.2f",per);
+}
+
+Que5.Write a programme to volume of cuboid.
+#include<stdio.h>
+void main()
+{
+	float l,b,h,v;
+	printf("Enter the length,breadth and height of cuboid.\n");
+	scanf("%f%f%f",&l,&b,&h);
+	v=l*b*h;
+	printf("The volume of cuboid is %.2f",v);
+}
+
+Que6.Write a programme to calculate the volume of sphere.
+#include<stdio.h>
+#define pi 3.14
+void main()
+{
+	float r,v;
+	printf("Enter the value of radius of sphere.\n");
+	scanf("%f",&r);
+	v=(4*pi*r*r*r)/3;
+	printf("The volume of sphere is %.2f",v);
+}
+
+Que7.Write a programme to convert the temperature from fareheniet to degree celsius.
+#include<stdio.h>
+void main()
+{
+	float f,c;
+	printf("Enter the value of temprature in farehniet.\n");
+	scanf("%f",&f);
+	c=((f-32)*5)/9;
+	printf("The value of temprature in celcius is %.2f",c);
+}
+
+Que8.Write a programme to convert the temperature from degree celsius to fareheniet .
+#include<stdio.h>
+void main()
+{
+	float f,c;
+	printf("Enter the value of temprature in celsius.\n");
+	scanf("%f",&c);
+	f=((c+32)*5)/9;
+	printf("The value of temprature in celcius is %.2f",f);
+}
+
+Que9.Write a programme to calculate the perimeter of traingle.
+#include<stdio.h>
+void main()
+{
+	float a,b,c,per;
+	printf("Enter the value of sides a,b and c.\n");
+	scanf("%f%f%f",&a,&b,&c);
+	per=a+b+c;
+	printf("Perimeter of triangle = %.2f",per);
+}
+
+Que10.Write a programme to clauculate the perimeter and area of square.
+#include<stdio.h>
+void main()
+{
+	int side,area,per;
+	printf("Enter the value of side of square.\n");
+	scanf("%d",&side);
+	per=4*side;
+	area=side*side;
+	printf("Area of square = %d\n",area);
+	printf("Perimeter of square = %d\n",per);
+}
+
+Que11.Write a programme to calculate the sum of first and last digit of given four digit number.
+#include<stdio.h>
+void main()
+{
+   int num,first,last,sum;
+   printf("Enter a four digit number.\n");
+   scanf("%d",&num);
+   first=num%10;
+   last=num/1000;
+   sum=first+last;
+   printf("The sum of first and last digit of given four digit number = %d",sum);	
+}
+
+Que12.Write a programme to calculate gross salary and net salary take a input basic sallery from user 
+and Ta will 10% of basic salary, da will 5% of bs, pf will be 7.8% of bs.
+//bs,gs,ns,ta,da,pf
+#include<stdio.h>
+void main()
+{
+    float bs,gs,ns,ta,da,pf;
+	printf("Enter the value of your basic salary.\n");
+	scanf("%f",&bs);
+	ta=(bs*10)/100;
+	da=(bs*5)/100;
+	pf=(bs*7.8)/100;
+	gs=bs+ta+da;
+	ns=gs-pf;
+	printf("The gross salary = %.2f\n",gs);
+	printf("The net salary = %.2f\n",ns);
+}
+
